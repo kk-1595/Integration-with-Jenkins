@@ -35,6 +35,8 @@ step 9 - sudo update-alternatives --config java
 step 9-  edit wrapper.conf 
 step -10 root la --> chown -R ubuntu:ubuntu /opt/sonarqube-6.7.6
 exit
+Sonarcube don’t start in root we can change some command below screenshot
+We can start in ec2-user
 It switch as a --> ec2/ubuntu user mode
 step 11- Should be in ec2/ubuntu user mode --> go to /opt/bin/linux83 path---> then restart--> ./soanr.sh start
 #Put command and execute  in mysql - mysql command
@@ -44,5 +46,39 @@ CREATE USER sonar@'%' IDENTIFIED BY 'sonar';
 GRANT ALL ON sonar.* TO sonar@localhost;
 GRANT ALL ON sonar.* TO sonar@'%';
 --------------
+SONARQUBE INTERGATE WITH JENKINS
 
-------------
+Sonarcube open webbrowser -->IP:9000
+Give loginMIN sonarqube webpage--->username-admin & Password-admin
+It asking token name ---I give sonar--->it give password that see below (token craeted)
+Suppose u foget token--->myaccount-->security-->create new token--->change
+Now sonarqube scanner install in jenkins
+Managejenkins--->manage plugin--->avialble--->sonarqube scaner-->click-->install without restart
+Go to Manage jebkins --> {(**Creditials--> system --> Global credinital**)}Sonarcube password pass to jenkins
+Sonar password --->give secret password
+Id-->jenkins file mentioned--->sonar
+ok
+Then
+Manage jenkin-->{(**configure system**)}
+ctrl+f-->sonar--->search
+Name-sonar
+Url-->sonar url(http://65.0.130.112:9000/sonar)
+Token-->sonar token
+save
+------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
