@@ -2,6 +2,11 @@
 
 MAVEN 
 
+Install maven on /opt by using below link
+Downlode binaries--> https://mirrors.estointernet.in/apache/maven/maven-3/3.8.5/binaries/apache-maven-3.8.5-bin.tar.gz
+untar--> tar -xvf 
+then take that path /opt/apache-maven3.8.6
+Then
 Maven plugin install in Jenkins --> Manage Jenkins--->Manage Plugin-->click --> Go to Available Tab--->search Maven
 Maven Integration click--->install without restart
 Manage Jenkins---->{[Global Tool configuartion]}--->Ctrl + F--->search Maven
